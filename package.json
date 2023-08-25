@@ -1,0 +1,25 @@
+{
+  "name": "wow-bot",
+  "version": "1.0.0",
+  "description": "WoW Raid Guild Bot",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "deploy": "node deploy-commands.js"
+  },
+  "keywords": [
+    "wow",
+    "bot"
+  ],
+  "author": "Nikola",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^14.13.0",
+    "dotenv": "^16.3.1",
+    "nodemon": "^3.0.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.47.0"
+  }
+}
