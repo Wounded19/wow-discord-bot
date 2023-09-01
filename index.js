@@ -1,13 +1,15 @@
-const dotenv = require("dotenv");
 const fs = require("node:fs");
 const path = require("node:path");
 const { Client, Collection, Events, GatewayIntentBits } = require("discord.js");
-
-dotenv.config();
+const { TOKEN } = require("./settings/config.js");
+const loadDatabase = require("./handlers/loadDatabase.js");
 
 const client = new Client({
   intents: [GatewayIntentBits.Guilds],
 });
+
+// Load database
+loadDatabase();
 
 // Read all files in the commands directory
 client.commands = new Collection();
@@ -50,4 +52,4 @@ for (const file of eventFiles) {
   }
 }
 
-client.login(process.env.TOKEN);
+client.login(TOKEN);
