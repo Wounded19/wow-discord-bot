@@ -8,9 +8,6 @@ const client = new Client({
   intents: [GatewayIntentBits.Guilds],
 });
 
-// Load database
-loadDatabase();
-
 // Read all files in the commands directory
 client.commands = new Collection();
 
@@ -51,5 +48,8 @@ for (const file of eventFiles) {
     client.on(event.name, (...args) => event.execute(...args));
   }
 }
+
+// Load database
+loadDatabase();
 
 client.login(TOKEN);
