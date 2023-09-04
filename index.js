@@ -1,6 +1,6 @@
 const fs = require("node:fs");
 const path = require("node:path");
-const { Client, Collection, Events, GatewayIntentBits } = require("discord.js");
+const { Client, Collection, GatewayIntentBits } = require("discord.js");
 const { TOKEN } = require("./settings/config.js");
 const loadDatabase = require("./handlers/loadDatabase.js");
 
